@@ -1,4 +1,4 @@
 pitfireio
 =========
 
-pitfire.io jekyll
+[pitfire.io](http://pitfire.io) jekyll
