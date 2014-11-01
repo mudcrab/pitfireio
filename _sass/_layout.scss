@@ -112,7 +112,7 @@ section#home-articles {
 	}
 }
 
-section.post {
+section.post, section.page {
 	margin: 0 10px;
 
 	&.splash {
@@ -186,6 +186,14 @@ section.post {
 	}
 }
 
+section.page {
+
+	h1.post-header {
+		border-bottom: none;
+		text-align: center;
+	}
+}
+
 #splash {
 	/* position: fixed;
 	top: 0;
@@ -240,7 +248,7 @@ section.post {
 }
 
 @include maxMQ(768px) {
-	section.post {
+	section.post, section.page {
 		font-size: 80%;
 	}
 }
