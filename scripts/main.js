@@ -42,7 +42,7 @@
 
 		if($('#splash').is(':visible'))
 		{
-			$('#splash').css('background-image', 'url(/images/' + $('#splash').data('bgr') + ')');
+			$('#splash').css('background-image', 'url(' + $('#splash').data('bgr') + ')');
 			$('#splash').show();
 		}
 

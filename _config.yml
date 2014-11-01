@@ -13,3 +13,4 @@ highlighter: rouge
 markdown: kramdown
 # permalink: pretty
 permalink: /:categories/:title
+static_location: 'http://static.pitfire.io'
