@@ -1,0 +1,74 @@
+@mixin translate-prop($prop, $speed) {
+	-webkit-transition: $prop $speed + ms linear;
+	-moz-transition: $prop $speed + ms linear;
+	-ms-transition: $prop $speed + ms linear;
+	-o-transition: $prop $speed + ms linear;
+	transition: $prop $speed + ms linear;
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+@mixin move3d($x, $y, $time, $transition:linear) {
+	-webkit-transform: translate3d($x, $y, 0);
+	-moz-transform: translate3d($x, $y, 0);
+	-o-transform: translate3d($x, $y, 0);
+	-ms-transform: translate3d($x, $y, 0);
+	transform: translate3d($x, $y, 0);
+	transition: transform $time, opacity $time $transition;
+}
+
+@mixin move($x, $y, $time) {
+	transform: translateX($x) translateY($y) translateZ(-1000px);
+	transition: transform $time, opacity $time $transition;
+}
+
+@mixin lineheight($h) {	
+	height: $h + px;
+	line-height: $h + px;
+}
+@mixin reset {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin list-reset {
+	@include reset;
+	list-style: none;
+}
+
+@function em($pixels, $context: $cinder-px-context) {
+  @return #{$pixels/$context}em
+}
+
+/* @mixin maxMQ($maxW) {
+	@media (max-width: $maxW) {
+		@content;
+	}
+} */
+
+@mixin maxMQ($maxW) {
+	@media (max-width: $maxW) {
+		@content;
+	}
+}
+
+@mixin minMQ($minW) {
+	@media (min-width: $minW) {
+		@content;
+	}
+}
+
+@mixin minMaxMQ($minW, $maxW) {
+	@media (min-width: $minW) and (max-width: $maxW) {
+		@content;
+	}
+}

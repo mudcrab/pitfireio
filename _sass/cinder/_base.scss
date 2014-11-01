@@ -1,0 +1,18 @@
+// include reset first
+@import "reset";
+
+// Grid configuration
+
+$cinder-grid-width: 1000px;
+$cinder-grid-columns: 12;
+
+// fonts
+
+$cinder-px-context: 16;
+
+
+$cinder-sans-font: 'Fira Sans', sans-serif;
+$cinder-mono-font: 'Fira Mono', monospace;
+
+$cinder-line-height: 1.5;
+$cinder-line-height-small: 1.1;

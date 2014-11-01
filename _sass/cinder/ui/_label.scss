@@ -1,0 +1,5 @@
+.label {
+	@extend .semibold;
+	text-transform: uppercase;
+	font-size: em(16);
+}

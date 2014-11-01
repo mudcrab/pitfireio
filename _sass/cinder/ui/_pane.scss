@@ -1,0 +1,49 @@
+section.cinder-pane {
+	width: 320px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	&.left-pane {
+		left: 0;
+
+	}
+
+	&.right-pane {
+		right: 0;
+	}
+
+	header.cinder-pane-header {
+		div.cinder-pane-close {
+			padding: 0 15px;
+			font-size: em(14);
+		}
+		div.cinder-pane-title {
+			// margin: 0 15px;
+			@extend .semibold;
+			// text-transform: uppercase;
+			font-size: em(18);
+		}
+	}
+
+	section.cinder-pane-content {
+		height: 100%;
+		overflow: auto;
+	}
+
+	&.noheader, &.nofooter {
+		section.cinder-pane-content {
+			height: calc(100% - 50px);
+		}
+	}
+
+	footer.cinder-pane-footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 50px;
+		width: 100%;
+		background: #fff;
+	}
+
+}

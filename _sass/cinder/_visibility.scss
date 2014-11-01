@@ -1,0 +1,63 @@
+/* 
+	xxlarge: 1920
+	xlarge: 1328
+	large: 1280
+	medium: 1024
+	small: 768
+	xsmall: 480
+	xxsmall: 320
+ */
+
+ .vis-xxlarge,
+ .vis-xlarge,
+ .vis-large,
+ .vis-medium,
+ .vis-small,
+ .vis-xsmall,
+ .vis-xxsmall {
+ 	display: none;
+
+ 	&:before, &:after {
+		display: none;
+ 	}
+ }
+
+ .hide-xsmall, .hide-xsmall:before, .hide-xsmall:after {
+ 	display: block;
+ }
+
+/* @include minMQ(1920) {
+	.vis-xxlarge {
+		display: block;
+	}	
+} */
+
+@include maxMQ(1024px) {
+	.vis-medium {
+		display: block;
+	}
+}
+
+@include maxMQ(768px) {
+	.vis-small {
+		display: block;
+	}
+}
+
+@include maxMQ(570px) {
+	.vis-xsmall, .vis-xsmall:before, .vis-xsmall:after {
+		display: block;
+	}
+}
+
+@include maxMQ(320px) {
+	.vis-xxsmall {
+		display: block;
+	}
+}
+
+@include maxMQ(570px) {
+	.hide-xsmall, .hide-xsmall:before, .hide-xsmall:after {
+		display: none;
+	}
+}

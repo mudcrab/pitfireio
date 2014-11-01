@@ -1,0 +1,24 @@
+.input, .dropdown {
+	background: transparent;
+	border: none;
+	min-width: 100px;
+	box-shadow: 0 1px 3px rgba(#111, 0.3);
+	@include lineheight(30);
+	padding-left: 10px;
+	font-family: $cinder-sans-font;
+	@extend .semibold;
+	outline: none;
+	@include translate-prop(box-shadow, 100);
+
+	&:focus {
+		box-shadow: 0 1px 3px rgba(#111, 0.45);
+	}
+
+	&.alt {
+		box-shadow: 0 1px 1px rgba(#111, 0.3);
+
+		&:focus {
+			box-shadow: 0 1px 1px rgba(#111, 0.6);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section id="home">
+	<section class="left food" id="home-menu">
+		<ul id="menu">
+			{% for category in site.categories %}
+				<li><a href="{{ site.url }}/{{ category | first }}.html">{{ category | first }}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+	<section class="right" id="home-articles">
+		<div id="articles-title" class="cf">
+			<div class="left" id="back">
+				<span class="ion-ios7-arrow-back"></span> 
+			</div>
+			<div class="right" id="title">
+				Food
+			</div>
+		</div>
+		<ul id="articles">
+		{{ content }}
+		</ul>
+	</section>
+</section>
+<script>
+	var posts = {
+		{% for category in site.categories %}
+		{{ category | first }} : {
+			{% for posts in category %}
+				{% for post in posts %}
+					'{{ post.title }}': '{{ post.url }}',
+				{% endfor %}
+			{% endfor %}
+		},
+		{% endfor %}
+	};
+</script>

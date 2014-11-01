@@ -1,0 +1,43 @@
+section.cinder-modal-overlay {
+	background: rgba(#fff, 0.9);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+
+	header.cinder-modal-titlebar {
+		@include lineheight(50);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		h1 {
+			font-size: em(24);
+			@extend .semibold;
+			padding: 0 20px;
+		}
+
+		div.cinder-modal-close {
+			float: right;
+			padding: 0 20px;
+		}
+	}
+
+	section.cinder-modal-dialog {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		z-index: 101;
+	}
+
+	footer.cinder-modal-buttonbar {
+		@include lineheight(50);
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

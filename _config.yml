@@ -1,0 +1,15 @@
+# Site settings
+title: JK
+email: jevgeni@pitfire.eu
+description: Oh hi!
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://pitfire.eu" # the base hostname & protocol for your site
+twitter_username: kohvihoor
+github_username:  mudcrab
+
+highlighter: rouge
+
+# Build settings
+markdown: kramdown
+# permalink: pretty
+permalink: /:categories/:title

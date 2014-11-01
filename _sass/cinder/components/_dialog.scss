@@ -1,0 +1,63 @@
+div.cinder-dialog {
+	position: fixed;
+	z-index: 10000;
+	width: 500px;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	box-shadow: 0 1px 17px rgba(#555, 0.7);
+
+	&.centered {
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+
+	header.cinder-dialog-header {
+		@include lineheight(39);
+		@extend .cf;
+		border-bottom: 1px solid #ddd;
+
+		h1.cinder-dialog-title {
+			@include reset;
+			font-size: 11pt;
+			padding: 0 10px;
+			float: left;
+
+			&.semibold { font-weight: 500; }
+			&.bold { font-weight: 700; }
+		}
+
+		button.cinder-dialog-close {
+			@include reset;
+			float: right;
+			height: 20px;
+			width: 20px;
+			margin: 10px;
+		}
+
+		section.cinder-dialog-actions {
+			@extend .cf;
+			float: right;
+		}
+	}
+
+	section.cinder-dialog-content {
+		padding: 10px;
+	}
+
+	footer.cinder-dialog-footer {
+		@include lineheight(39);
+		@extend .cf;
+		border-top: 1px solid #ddd;
+		
+		section.cinder-dialog-footer-buttons-left {
+			width: 50%;
+			float: left;
+		}
+
+		section.cinder-dialog-footer-buttons-right {
+			width: 50%;
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+body {
+	font-family: $cinder-sans-font;
+	line-height: $cinder-line-height;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.normal {
+	font-weight: 400;
+}
+
+.semibold {
+	font-weight: 500;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.mono {
+	font-family: $cinder-mono-font;
+}
+
+.up {
+	text-transform: uppercase;
+}
+
+h1 {
+	@extend .bold;
+	font-size: em(32);
+}
+
+h2 {
+	@extend .semibold;
+	font-size: em(28);
+}
+
+h3, h4, h5, h6 {
+	@extend .normal;
+}
+
+h3 {
+	font-size: em(22);
+}
+
+h4 {
+	font-size: em(18);
+}
+
+h5 {
+	font-size: em(14);
+}
+
+h6 {
+	font-size: em(12);
+}

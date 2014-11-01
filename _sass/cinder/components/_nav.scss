@@ -1,0 +1,21 @@
+nav.nav {
+	@include lineheight(50);
+	@extend .cf;
+	
+	background: #212121;
+	
+	&.sticky {
+		position: fixed;
+	}
+	
+	ul {
+		@extend .cf;
+		
+		li {	
+			a, a:visited, a:active, a:hover { 
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}

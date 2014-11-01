@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section id="splash" data-bgr="{{ page.splash }}"></section>
+<section class="post {{ page.post_type }}">
+	<h1 class="post-header row">
+		<span class="title left">{{ page.title }}</span>
+		<span class="right date">{{ page.date | date: "%-d %B" }}</span>
+	</h1>
+	<article class="content row">
+		{{ content }}
+	</article>
+	<footer class="row">
+		<a href="{{ site.url }}/{{ page.category }}.html">
+			<span class="left"><i class="ion-ios7-arrow-back"></i></span>
+			<span class="left">
+				Back to {{ page.category }}
+			</span>
+		</a>
+	</footer>
+</section>
