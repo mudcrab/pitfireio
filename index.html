@@ -4,6 +4,9 @@ layout: default
 
 <section id="home">
 	<section class="left" id="home-menu">
+		<section id="home-header">
+			<a href="#">JK</a>
+		</section>
 		<ul id="menu">
 			<li><a href="/about">About</a></li>
 			{% for category in site.categories %}
@@ -11,6 +14,11 @@ layout: default
 			{% endfor %}
 			<li><a href="/contact">Contact</a></li>
 		</ul>
+		<section id="home-social">
+			<a href="#"><i class="ion-social-github"></i></a>
+			<a href="#"><i class="ion-social-instagram"></i></a>
+			<a href="#"><i class="ion-social-skype"></i></a>
+		</section>
 	</section>
 	<section class="right" id="home-articles">
 		<div id="articles-title" class="cf">
@@ -22,23 +30,31 @@ layout: default
 			</div>
 		</div>
 		<ul id="articles">
-		{% for post in site.categories.food %}
-			<li class="article">
-				<div class="content">
-					<a href="{{ post.url }}">{{ post.title }}</a>
-				</div>
-			</li>
+		{% for category in site.categories %}
+			{% for posts in category %}
+				{% for post in posts %}
+					{% unless post.title == nil %}
+					<li class="article">
+						<div class="content">
+							<a href="{{ post.url }}">{{ post.title }}</a>
+						</div>
+					</li>
+					{% endunless %}
+				{% endfor %}
+			{% endfor %}
 		{% endfor %}
 		</ul>
 	</section>
 </section>
 <script>
+	var nPosts = 0;
 	var posts = {
 		{% for category in site.categories %}
 		{{ category | first }} : {
 			{% for posts in category %}
 				{% for post in posts %}
 					'{{ post.title }}': '{{ post.url }}',
+					i++;
 				{% endfor %}
 			{% endfor %}
 		},
