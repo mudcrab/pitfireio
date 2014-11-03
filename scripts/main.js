@@ -46,6 +46,12 @@
 			$('#splash').show();
 		}
 
+		if(nPosts == 0)
+		{
+			$('#home-articles').remove();
+			$('#home-menu').addClass('full');
+		}
+
 	});
 
 })(jQuery);
