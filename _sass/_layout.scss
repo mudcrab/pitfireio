@@ -125,6 +125,7 @@ section.post, section.page {
 			transform: translateY(-50%) translateX(-50%);
 			color: #fff;
 			text-shadow: 0 1px 3px #000;
+			border: none;
 
 			.title {
 				font-size: em(24);
@@ -171,6 +172,11 @@ section.post, section.page {
 
 		p {
 			margin: 10px 0;
+		}
+
+		ul {
+			list-style-position: inside;
+			margin-left: 20px;
 		}
 	}
 
