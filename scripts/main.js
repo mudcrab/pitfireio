@@ -24,10 +24,16 @@
 						'</div>' +
 					'</li>');
 				}
-
-				history.pushState({
-					page: $(this).text()
-				}, $(this).text(), $(this).text() + '.html')
+				if(!$(this).hasClass('category'))
+				{
+					window.location = $(this).attr('href');
+				}
+				else
+				{
+					history.pushState({
+						page: $(this).text()
+					}, $(this).text(), $(this).text().toLowerCase())
+				}
 			}
 
 		});

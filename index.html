@@ -10,7 +10,7 @@ layout: default
 		<ul id="menu">
 			<li><a href="/about">About</a></li>
 			{% for category in site.categories %}
-				<li><a href="{{ site.url }}/{{ category | first }}.html">{{ category | first }}</a></li>
+				<li><a class="category" href="{{ site.url }}/{{ category | first }}.html">{{ category | first }}</a></li>
 			{% endfor %}
 			<li><a href="/contact">Contact</a></li>
 		</ul>
